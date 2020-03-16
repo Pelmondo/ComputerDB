@@ -58,6 +58,16 @@ class ViewController: UIViewController, ComputersGet {
         
         appDelegate.network.delegate = self
         appDelegate.network.getComputersList()
+        
+        //MARK: - connection check
+        if Reachability.isConnectedToNetwork() == true {
+            print("It's okay")
+        } else {
+            let alert = UIAlertController(title: nil, message: "Internet connections failed!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
+            }))
+            self.present(alert,animated: true, completion: nil)
+        }
             
     }
     
