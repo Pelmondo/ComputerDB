@@ -15,7 +15,7 @@
 		5618C2C1241FFED600AAD6A6 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5618C2C0241FFED600AAD6A6 /* Reachability.swift */; };
 		56458DF92419F4CE007640D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56458DF82419F4CE007640D4 /* AppDelegate.swift */; };
 		56458DFB2419F4CE007640D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56458DFA2419F4CE007640D4 /* SceneDelegate.swift */; };
-		56458DFD2419F4CE007640D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56458DFC2419F4CE007640D4 /* ViewController.swift */; };
+		56458DFD2419F4CE007640D4 /* ComputerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56458DFC2419F4CE007640D4 /* ComputerListVC.swift */; };
 		56458E002419F4CE007640D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56458DFE2419F4CE007640D4 /* Main.storyboard */; };
 		56458E032419F4CE007640D4 /* ComputerDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56458E012419F4CE007640D4 /* ComputerDB.xcdatamodeld */; };
 		56458E052419F4D3007640D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56458E042419F4D3007640D4 /* Assets.xcassets */; };
@@ -32,7 +32,7 @@
 		56458DF52419F4CE007640D4 /* ComputerDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComputerDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56458DF82419F4CE007640D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56458DFA2419F4CE007640D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		56458DFC2419F4CE007640D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		56458DFC2419F4CE007640D4 /* ComputerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerListVC.swift; sourceTree = "<group>"; };
 		56458DFF2419F4CE007640D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56458E022419F4CE007640D4 /* ComputerDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ComputerDB.xcdatamodel; sourceTree = "<group>"; };
 		56458E042419F4D3007640D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +56,7 @@
 			children = (
 				5616B282241E1A15007E9CD3 /* Network.swift */,
 				5616B284241E1A52007E9CD3 /* JSONParser.swift */,
+				5618C2C0241FFED600AAD6A6 /* Reachability.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -64,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				5618C2BD241FA51500AAD6A6 /* Cells */,
-				5618C2C0241FFED600AAD6A6 /* Reachability.swift */,
 			);
 			path = Computers;
 			sourceTree = "<group>";
@@ -100,7 +100,7 @@
 				56458DF82419F4CE007640D4 /* AppDelegate.swift */,
 				56458DFA2419F4CE007640D4 /* SceneDelegate.swift */,
 				5616B27B2419FCA0007E9CD3 /* Computers */,
-				56458DFC2419F4CE007640D4 /* ViewController.swift */,
+				56458DFC2419F4CE007640D4 /* ComputerListVC.swift */,
 				5616B280241E0CEC007E9CD3 /* ComputerCardVC.swift */,
 				5616B2792419FC7F007E9CD3 /* Network */,
 				56458DFE2419F4CE007640D4 /* Main.storyboard */,
@@ -188,7 +188,7 @@
 				5616B285241E1A52007E9CD3 /* JSONParser.swift in Sources */,
 				5616B283241E1A15007E9CD3 /* Network.swift in Sources */,
 				5616B27F241A8D4F007E9CD3 /* ComputerCell.swift in Sources */,
-				56458DFD2419F4CE007640D4 /* ViewController.swift in Sources */,
+				56458DFD2419F4CE007640D4 /* ComputerListVC.swift in Sources */,
 				56458DF92419F4CE007640D4 /* AppDelegate.swift in Sources */,
 				5616B281241E0CEC007E9CD3 /* ComputerCardVC.swift in Sources */,
 				5618C2C1241FFED600AAD6A6 /* Reachability.swift in Sources */,
