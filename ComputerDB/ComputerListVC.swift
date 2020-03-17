@@ -37,6 +37,14 @@ class ComputerListVC: UIViewController, ComputersGet {
     private let cellIdOne = "without company"
     private let cellIdTwo = "with company"
     
+    private func setUpTable() {
+        tableView.register(ComputerCell.self, forCellReuseIdentifier: cellIdOne)
+        tableView.register(ComputerCompanyCell.self, forCellReuseIdentifier: cellIdTwo)
+        tableView.delegate = self
+        tableView.dataSource = self
+        searchBar.delegate = self
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -44,11 +52,7 @@ class ComputerListVC: UIViewController, ComputersGet {
         navigationController?.navigationBar.prefersLargeTitles = true
         view.addSubview(searchBar)
         view.addSubview(tableView)
-        tableView.register(ComputerCell.self, forCellReuseIdentifier: cellIdOne)
-        tableView.register(ComputerCompanyCell.self, forCellReuseIdentifier: cellIdTwo)
-        tableView.delegate = self
-        tableView.dataSource = self
-        searchBar.delegate = self
+        setUpTable()
         setUpLayout()
         
     }
@@ -81,7 +85,7 @@ class ComputerListVC: UIViewController, ComputersGet {
     }
     
     
-    //MARK: - Test model
+    //MARK: - get data
     
     func getComputers(computers: Data) {
         do {
@@ -156,7 +160,7 @@ extension ComputerListVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-
+//MARK: - UISearch bar delegate
 extension ComputerListVC: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

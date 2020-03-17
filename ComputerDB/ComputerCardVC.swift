@@ -140,8 +140,6 @@ class ComputerCardVC: UIViewController, ComputersGet {
         stackView.addArrangedSubview(button)
         }
     
-    
-    
     //MARK: - button's actions
     private var isButtonPressed = false
     @objc func tapButton(sender: UIButton) {
@@ -157,7 +155,7 @@ class ComputerCardVC: UIViewController, ComputersGet {
         navigationController?.pushViewController(nextVC, animated: true)
         }
     
-    
+    //Prop
     let appDelegate = AppDelegate()
     var computerId = 0
     private var isComputerCard = true
@@ -165,10 +163,7 @@ class ComputerCardVC: UIViewController, ComputersGet {
     private var computerCard : ComputerCard?
     private var maxCountLink = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        view.addSubview(scrollView)
+    private func setUpScrollV() {
         scrollView.addSubview(computerImage)
         scrollView.addSubview(nameLabel)
         scrollView.addSubview(computerNameLabel)
@@ -182,6 +177,13 @@ class ComputerCardVC: UIViewController, ComputersGet {
         scrollView.addSubview(activityInd)
         scrollView.addSubview(previewLabel)
         scrollView.addSubview(stackView)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        view.addSubview(scrollView)
+        setUpScrollV()
         activityInd.isHidden = false
         activityInd.startAnimating()
         setUpLayout()
@@ -268,9 +270,7 @@ class ComputerCardVC: UIViewController, ComputersGet {
             self.computerDiscountLabel.text = self.dateParse(self.computerCard?.discounted)
             self.computerDiscriptLabel.text = self.computerCard?.description
         }
-        
     }
-    
 }
 
 
@@ -368,8 +368,6 @@ extension ComputerCardVC {
                 stackView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
                 stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor,
                                                   constant: -16),
-                
-                
                 
             ]
             
